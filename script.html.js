@@ -8,7 +8,7 @@ let VPN = 0
 
 
 function increasePoints () {
-    points = points + 100000
+    points = points + 1
     pointsTracker.innerText = points + " Computer Points"
 }
 
