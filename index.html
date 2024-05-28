@@ -10,17 +10,36 @@
 <body>
     <div class="container">
         <div class="gameplay">
-            <h1 id="pointsTracker">123</h1>
+            <h1 id="pointsTracker">0</h1>
             <button onclick="increasePoints()">
             <img src="images/computer.png" alt="Button">
         </button>
         </div>
         <div class="store">
+            <button onclick = "fenceAdd()">
             <img src="images/garden-fence.png" alt="Fence Upgrade">
+            </button>
+            <p id="fence">Cost: 10</p>
+            <button onclick = "guard_dogAdd()">
             <img src="images/guarddog.png" alt="Guard Dog Upgrade">
+            </button>
+            <p class="t">Cost: 300</p>
+            <button onclick = "passwordAdd()">
             <img src="images/1password.png" alt="Password Upgrade">
+            </button>
+            <p class="t">Cost: 1,000</p>
+            <button  onclick = "firewallAdd()">
             <img src="images/firewall.gif" alt="Firewall Upgrade">
+            </button>
+            <p class="t">Cost: 50,000</p>
+            <button onclick = "VPNAdd()">
             <img src="images/vpn (1).png" alt=" VPN Upgrade">
+            </button>
+            <p class="t">Cost: 100,000</p>
+        </div>
+        <div class="display">
+            <img src="images/computer.png" alt="">
+
         </div>
         <div class="display"></div>
         <div class="header">Hacker Preventer</div>
