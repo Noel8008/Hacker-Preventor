@@ -1,4 +1,5 @@
 
+        @import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
         .container {  display: grid;
   grid-template-columns: 0.8fr 0.8fr 1.4fr;
   grid-template-rows: 0.3fr 2.2fr 0.5fr;
@@ -13,7 +14,7 @@
 
 .gameplay { 
     grid-area: gameplay;
-    background-color: lime; 
+    color: white;
 }
 
 .store { 
@@ -23,18 +24,29 @@
 
 .display { 
     grid-area: display; 
-    background-color: lime;
 }
 
 .header { 
     grid-area: header;
     background-color: black;
     color: white;
-    font-style: impact;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.description { grid-area: description; }
+.description { 
+    grid-area: description; 
+    background-color: black;
+    color: white;
+
+}
 
 p{
     color: white;
+}
+
+body {
+    background-image: url("images/binary-code-475664_640.webp");
 }
