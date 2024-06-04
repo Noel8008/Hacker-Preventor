@@ -15,7 +15,7 @@ let China = document.getElementById("china")
 
 
 function increasePoints () {
-    points = points + 100000
+    points = points + 10000
     pointsTracker.innerText = points.toFixed(0) + " Computer Points"
 }
 
@@ -98,9 +98,46 @@ function VPNAdd(){
 }
 
 
+
+
 function gameloop() {
     points = points + (fence * 1) + (guard_dog * 15) + (password * 100) + (firewall * 500) + (VPN * 1000)
     pointsTracker.innerText = points.toFixed(0) + " Computer Points"
+    if (points < 10 + fence ** 1.5){
+    document.getElementById("fencebtn").disabled = true
+    }else{
+    document.getElementById("fencebtn").disabled = false
+}
+    if (points < 300 + guard_dog ** 2.5){
+    document.getElementById("guard_dogbtn").disabled = true
+    }else{
+    document.getElementById("guard_dogbtn").disabled = false
+} 
+    if (points < 1000 + fence ** 4.0){
+    document.getElementById("passwordbtn").disabled = true
+    }else{
+    document.getElementById("passwordbtn").disabled = false
+} 
+    if (points < 50000 + firewall ** 5.5){
+    document.getElementById("firewallbtn").disabled = true
+    }else{
+    document.getElementById("firewallbtn").disabled = false
+} 
+    if (points < 100000 + VPN ** 7.0){
+    document.getElementById("VPNbtn").disabled = true
+    }else{
+    document.getElementById("VPNbtn").disabled = false
+}
 }
 
+let bgMusic = new Howl({
+    src: ['audio/bgmusic.mp3'],
+    autoplay: true, 
+    loop: true, 
+    audio: .15,
+  })
+
+  function muteMusic () {
+    bgMusic.pause()
+  }
 setInterval(gameloop, 1000)

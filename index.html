@@ -11,41 +11,49 @@
     <div class="container">
         <div class="gameplay">
             <h1 id="pointsTracker">0</h1>
-            <button onclick="increasePoints()">
+            <button id="clickmeharder" onclick="increasePoints()">
             <img src="images/computer.png" alt="Button">
         </button>
         </div>
         <div class="store">
-            <button onclick = "fenceAdd()">
-            <img src="images/garden-fence.png" alt="Fence Upgrade">
+            <button id="fencebtn" onclick = "fenceAdd()">
+            <img src="images/bettergate.png" height="125" width="125" alt="Fence Upgrade">
             </button>
             <p id="de_fence">Cost: 10</p>
-            <button onclick = "guard_dogAdd()">
-            <img src="images/guarddog.png" alt="Guard Dog Upgrade">
+            <button id="guard_dogbtn" onclick = "guard_dogAdd()">
+            <img src="images/guardian.png" height="125" alt="Guard Dog Upgrade">
             </button>
             <p id="cujo">Cost: 300</p>
-            <button onclick = "passwordAdd()">
-            <img src="images/1password.png" alt="Password Upgrade">
+            <button id="passwordbtn" onclick = "passwordAdd()">
+            <img src="images/password.png" height="125" alt="Password Upgrade">
             </button>
             <p id="onetwothreefour">Cost: 1,000</p>
-            <button  onclick = "firewallAdd()">
+            <button id="firewallbtn" onclick = "firewallAdd()">
             <img src="images/firewall.gif" alt="Firewall Upgrade">
             </button>
             <p id="firebrick">Cost: 50,000</p>
-            <button onclick = "VPNAdd()">
-            <img src="images/vpn (1).png" alt=" VPN Upgrade">
+            <button id="vpnbtn" onclick = "VPNAdd()">
+            <img src="images/VeePeeEn-Photoroom.png" height="125" alt=" VPN Upgrade">
             </button>
             <p id="china">Cost: 100,000</p>
         </div>
+        
         <div class="display">
-            <img src="images/computer.png" alt="">
-
+            Defend youself from hackers! Your knowledge on hacker prevention is scarce at the beginning, but which each purchase of an upgrade you become more secure and smart.
         </div>
-        <div class="display"></div>
-        <div class="header">Hacker Preventer</div>
-        <div class="description">Defend youself from hackers! Your knowledge on hacker prevention is scarce at the beginning, but which each purchase of an upgrade you become more secure and smart.</div>
-      </div>  
+        <div class="header">
+            Hacker Preventer
+        </div>
+        
+        <div class="description">
 
+      </div> 
+    </div>
+
+      <button 
+      onclick="muteMusic()">Mute Music</button>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
     <script src="script.html.js"></script>
 </body>
 </html>

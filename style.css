@@ -1,49 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Poetsen+One&display=swap');
 
-        @import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
-        .container {  display: grid;
-  grid-template-columns: 0.8fr 0.8fr 1.4fr;
-  grid-template-rows: 0.3fr 2.2fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "header header header"
-    "gameplay store display"
-    "description description description";
+.container {
+    display: grid;
+
+    grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    grid-template-rows: 0.3fr 2.2fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header"
+        "gameplay store display"
+        "description description description";
     height: 100vh;
 }
 
-.gameplay { 
+.gameplay {
     grid-area: gameplay;
     color: white;
+    text-align: center;
+    padding-top: 250px;
+    font-family: "Poetsen One", sans-serif;
+
 }
 
-.store { 
-    grid-area: store; 
+.store {
+    grid-area: store;
     background-color: black;
+    text-align: center;
 }
 
-.display { 
-    grid-area: display; 
+.display {
+    grid-area: display;
+    color: white;
+    padding-top: 300px;
+    font-size: x-large;
+    font-family: "Poetsen One", sans-serif;
+    text-align: center;
 }
 
-.header { 
+.header {
     grid-area: header;
     background-color: black;
     color: white;
     font-family: "Jaro", sans-serif;
     font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: xx-large;
 }
 
-.description { 
-    grid-area: description; 
+.description {
+    grid-area: description;
     background-color: black;
     color: white;
 
 }
 
-p{
+p {
     color: white;
 }
 
