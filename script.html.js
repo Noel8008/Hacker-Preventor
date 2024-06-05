@@ -1,3 +1,11 @@
+let bgMusic = new Howl({
+    src: ['audio/bgmusic.mp3'],
+    autoplay: true, 
+    loop: true, 
+    volume: .15,
+  })
+
+
 let points = 0 
 let pointsTracker = document.getElementById("pointsTracker")
 let fence = 0
@@ -12,11 +20,32 @@ let onetwothreefour = document.getElementById("onetwothreefour")
 let firebrick = document.getElementById("firebrick")
 let China = document.getElementById("china")
 
+let sound1 = new Howl({
+    src: ["audio/gate.mp3"],
+    volume: .10,
+})
+let sound2 = new Howl({
+    src: ['audio/guard_dog.mp3'],
+})
+let sound3 = new Howl({
+    src: ['audio/password.mp3'],
+})
+let sound4 = new Howl({
+    src: ['audio/firewall.mp3'],
+})
+let sound5 = new Howl({
+    src: ['audio/vpn.mp3'],
+})
+let clicksound = new Howl({
+    src: ['audio/click.mp3'],
+    volume: .15
+})
 
 
 function increasePoints () {
-    points = points + 10000
+    points = points + 1
     pointsTracker.innerText = points.toFixed(0) + " Computer Points"
+    clicksound.play()
 }
 
 function fenceAdd(){
@@ -30,6 +59,7 @@ function fenceAdd(){
         pointsTracker.innerText = points.toFixed(0) + " Computer Points" 
          cost = cost + fence ** 1.5
          de_fence.innerText = "Cost:" + cost.toFixed(0);
+         sound1.play()
 
     }
 }
@@ -47,6 +77,7 @@ function guard_dogAdd(){
         pointsTracker.innerText = points.toFixed(0) + " Computer Points" 
         cost = cost + guard_dog ** 3.0
         cujo.innerText = "Cost:" + cost.toFixed(0);
+        sound2.play()
     }
 }
 
@@ -63,6 +94,7 @@ function passwordAdd(){
         pointsTracker.innerText = points.toFixed(0) + " Computer Points" 
         cost = cost + password ** 5.0
         onetwothreefour.innerText = "Cost:" + cost.toFixed(0)
+        sound3.play()
     }
 }
 
@@ -79,6 +111,7 @@ function firewallAdd(){
         pointsTracker.innerText = points.toFixed(0) + " Computer Points" 
         cost = cost + firewall ** 6.5
         firebrick.innerText = "Cost:" + cost.toFixed(0)
+        sound4.play()
     }
 }
 
@@ -94,6 +127,7 @@ function VPNAdd(){
         pointsTracker.innerText = points.toFixed(0) + " Computer Points" 
         cost = cost + VPN ** 7.0 
         China.innerText = "Cost:" + cost.toFixed(0)
+        sound5.play()
     }
 }
 
@@ -130,14 +164,18 @@ function gameloop() {
 }
 }
 
-let bgMusic = new Howl({
-    src: ['audio/bgmusic.mp3'],
-    autoplay: true, 
-    loop: true, 
-    audio: .15,
-  })
+let soundPlaying = true;
 
   function muteMusic () {
-    bgMusic.pause()
+    if(soundPlaying == true){
+    bgMusic.pause();
+    document.getElementById("musicController").innerText = "Unmute Music"
+    soundPlaying = false;
+    }else{
+        bgMusic.play()
+        document.getElementById("musicController").innerText = "Mute Music"
+        soundPlaying = true
+    }
+    
   }
 setInterval(gameloop, 1000)
