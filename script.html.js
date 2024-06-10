@@ -46,6 +46,8 @@ function increasePoints () {
     points = points + 1
     pointsTracker.innerText = points.toFixed(0) + " Computer Points"
     clicksound.play()
+    clickmeNOW.classList.add("animate__animated")
+    clickmeNOW.classList.add("animate__bounce")
 }
 
 function fenceAdd(){
@@ -166,7 +168,7 @@ function gameloop() {
 
 let soundPlaying = true;
 
-  function muteMusic () {
+  function muteMusic() {
     if(soundPlaying == true){
     bgMusic.pause();
     document.getElementById("musicController").innerText = "Unmute Music"
